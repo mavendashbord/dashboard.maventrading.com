@@ -12,7 +12,6 @@
         text-align: center;
     }
 
-    /* Header */
     .header {
         padding: 50px 20px 20px;
     }
@@ -45,7 +44,6 @@
         animation: fadeIn 1.2s forwards;
     }
 
-    /* Certificate container */
     .certificate-container {
         display: flex;
         justify-content: center;
@@ -69,7 +67,6 @@
         to { opacity: 1; }
     }
 
-    /* Mobile responsiveness */
     @media (max-width: 600px) {
         .logo-text {
             flex-direction: column;
@@ -91,23 +88,21 @@
 </head>
 <body>
 
-<!-- Header with logo and text -->
 <div class="header">
     <div class="logo-text">
-        <!-- Replace with your logo -->
         <img src="new-logo.png" class="logo" alt="Logo">
         <span class="brand">Maven Trading Group</span>
     </div>
     <div class="subtext">Withdrawal Certificate</div>
 </div>
 
-<!-- Certificate -->
 <div class="certificate-container">
-    <img id="certificate" src="certificate.png" alt="Certificate">
+    <!-- Указываем либо локальный путь, либо ссылку онлайн -->
+    <img id="certificate" src="https://via.placeholder.com/800x500.png?text=Certificate" alt="Certificate">
 </div>
 
 <script>
-    // Change certificate image via URL: ?image=another.png
+    // Позволяет менять изображение через URL параметр: ?image=ссылка_или_путь
     const urlParams = new URLSearchParams(window.location.search);
     const imageParam = urlParams.get('image');
     if (imageParam) {
