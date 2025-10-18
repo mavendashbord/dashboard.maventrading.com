@@ -1,114 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Maven Trading Group | Withdrawal Certificate</title>
-<style>
-    body {
-        margin: 0;
-        background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
-        font-family: Arial, sans-serif;
-        color: #e5e5e5;
-        text-align: center;
-    }
-
-    .header {
-        padding: 50px 20px 20px;
-    }
-
-    .logo-text {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 12px;
-        opacity: 0;
-        animation: fadeIn 1s forwards;
-    }
-
-    .logo {
-        height: 50px;
-        width: auto;
-    }
-
-    .brand {
-        font-size: 26px;
-        font-weight: 700;
-        letter-spacing: 0.5px;
-    }
-
-    .subtext {
-        margin-top: 20px;
-        font-size: 14px;
-        opacity: 0.8;
-        font-weight: 300;
-        animation: fadeIn 1.2s forwards;
-    }
-
-    .certificate-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-    }
-
-    .certificate-container img {
-        max-width: 65%;
-        max-height: 55vh;
-        border-radius: 14px;
-        box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-        display: block;
-        margin: 0 auto;
-        transition: all 0.3s ease;
-        opacity: 0;
-        animation: fadeIn 1.5s forwards;
-    }
-
-    @keyframes fadeIn {
-        to { opacity: 1; }
-    }
-
-    @media (max-width: 600px) {
+    <meta charset="UTF-8">
+    <title>Maven Trading Group | Withdrawal Certificate</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #0d0d0d;
+            font-family: Arial, sans-serif;
+            color: #e5e5e5;
+            text-align: center;
+        }
+        .header {
+            padding: 40px 20px 20px;
+        }
         .logo-text {
-            flex-direction: column;
-            gap: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            color: white;
+        }
+        .logo {
+            height: 45px;
+            width: auto;
         }
         .brand {
-            font-size: 20px;
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
         }
         .subtext {
-            font-size: 12px;
-            margin-top: 15px;
+            margin-top: 6px;
+            font-size: 15px;
+            opacity: 0.75;
+            font-weight: 300;
         }
-        .certificate-container img {
-            max-width: 90%;
-            max-height: 50vh;
+        .certificate-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
         }
-    }
-</style>
+        img {
+            max-width: 95%;
+            max-height: 85vh;
+            object-fit: contain;
+            border-radius: 12px;
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.06);
+        }
+    </style>
 </head>
 <body>
 
-<div class="header">
-    <div class="logo-text">
-        <img src="new-logo.png" class="logo" alt="Logo">
-        <span class="brand">Maven Trading Group</span>
+    <!-- 🔷 Логотип + Текст -->
+    <div class="header">
+        <div class="logo-text">
+            <svg class="logo" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0" y="30" width="20" height="50" rx="2" fill="white"/>
+                <rect x="30" y="10" width="20" height="70" rx="2" fill="white"/>
+                <rect x="60" y="20" width="20" height="60" rx="2" fill="white"/>
+            </svg>
+            <span class="brand">Maven Trading Group</span>
+        </div>
+        <div class="subtext">Withdrawal Certificate</div>
     </div>
-    <div class="subtext">Withdrawal Certificate</div>
-</div>
 
-<div class="certificate-container">
-    <!-- Указываем либо локальный путь, либо ссылку онлайн -->
-    <img id="certificate" src="https://via.placeholder.com/800x500.png?text=Certificate" alt="Certificate">
-</div>
+    <!-- 🔽 Сертификат -->
+    <div class="certificate-container">
+        <img id="certificate" src="certificate.png" alt="Certificate">
+    </div>
 
-<script>
-    // Позволяет менять изображение через URL параметр: ?image=ссылка_или_путь
-    const urlParams = new URLSearchParams(window.location.search);
-    const imageParam = urlParams.get('image');
-    if (imageParam) {
-        document.getElementById('certificate').src = imageParam;
-    }
-</script>
-
+    <script>
+        // Allow changing image via URL parameter: ?image=another.png
+        const urlParams = new URLSearchParams(window.location.search);
+        const imageParam = urlParams.get('image');
+        if (imageParam) {
+            document.getElementById('certificate').src = imageParam;
+        }
+    </script>
 </body>
 </html>
