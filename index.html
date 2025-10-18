@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Certificate Viewer</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #111;
+        }
+        img {
+            max-width: 100%;
+            max-height: 100vh;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <img id="certificate" src="certificate.jpg" alt="Certificate">
+    <script>
+        // Allow changing image via URL parameter: ?image=another.jpg
+        const urlParams = new URLSearchParams(window.location.search);
+        const imageParam = urlParams.get('image');
+        if (imageParam) {
+            document.getElementById('certificate').src = imageParam;
+        }
+    </script>
+</body>
+</html>
