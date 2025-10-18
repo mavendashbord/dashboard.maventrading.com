@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payout Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            text-align: center;
+        }
+        .container {
+            margin: 20px auto;
+            max-width: 800px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .details {
+            margin-top: 15px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Maven Trading Payout Confirmation</h2>
+        <img src="certificate.jpg" alt="Certificate">
+        <div class="details">
+            <p><strong>Date:</strong> <span id="dateField"></span></p>
+            <p><strong>Login:</strong> <span id="loginField"></span></p>
+        </div>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById('dateField').textContent = params.get('date') || 'N/A';
+        document.getElementById('loginField').textContent = params.get('login') || 'N/A';
+    </script>
+</body>
+</html>
