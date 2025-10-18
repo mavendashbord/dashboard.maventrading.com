@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Maven Trading Group | Withdrawal Certificate</title>
     <style>
-        /* ✅ Стили уже есть – сюда ДОБАВЬ стили карточки даты */
         body {
             margin: 0;
             background-color: #0f0f0f;
@@ -47,31 +46,11 @@
             object-fit: contain;
             border-radius: 10px;
         }
-
-        /* 🔽 ВСТАВЬ ЭТО НИЖЕ (стиль карточки даты) */
-        .date-card {
-            background-color: #1a1a1a;
-            border: 1px solid #333;
-            padding: 20px;
-            margin: 20px auto;
-            width: 300px;
-            border-radius: 10px;
-            text-align: left;
-            font-size: 16px;
-        }
-        .date-label {
-            opacity: 0.8;
-            margin-bottom: 5px;
-        }
-        .date-value {
-            font-size: 18px;
-            font-weight: 600;
-        }
     </style>
 </head>
 <body>
 
-    <!-- 🔷 Логотип -->
+    <!-- 🔷 Логотип + Текст -->
     <div class="header">
       <div class="logo-text">
         <svg class="logo" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
@@ -89,24 +68,12 @@
         <img id="certificate" src="certificate.jpg" alt="Certificate">
     </div>
 
-    <!-- ✅ ВСТАВЬ ЭТО СРАЗУ ПОД СЕРТИФИКАТОМ -->
-    <div class="date-card">
-        <div class="date-label">Date:</div>
-        <div class="date-value" id="dateField">—</div>
-    </div>
-
     <script>
-        // ✅ Изменение картинки
+        // Allow changing image via URL parameter: ?image=another.jpg
         const urlParams = new URLSearchParams(window.location.search);
         const imageParam = urlParams.get('image');
         if (imageParam) {
             document.getElementById('certificate').src = imageParam;
-        }
-
-        // ✅ Добавление даты
-        const dateParam = urlParams.get('date');
-        if (dateParam) {
-            document.getElementById('dateField').textContent = dateParam;
         }
     </script>
 </body>
