@@ -12,7 +12,6 @@
         text-align: center;
     }
 
-    /* Header */
     .header {
         padding: 50px 20px 20px;
     }
@@ -68,7 +67,6 @@
         to { opacity: 1; }
     }
 
-    /* Mobile responsiveness */
     @media (max-width: 600px) {
         .logo-text {
             flex-direction: column;
@@ -90,30 +88,7 @@
 </head>
 <body>
 
-<!-- Header with logo and text -->
 <div class="header">
     <div class="logo-text">
-        <!-- Здесь вставь свой логотип, сейчас онлайн-заглушка -->
-        <img src="https://via.placeholder.com/150x50.png?text=Logo" class="logo" alt="Logo">
-        <span class="brand">Maven Trading Group</span>
-    </div>
-    <div class="subtext">Withdrawal Certificate</div>
-</div>
-
-<!-- Certificate -->
-<div class="certificate-container">
-    <!-- Онлайн-заглушка сертификата -->
-    <img id="certificate" src="https://via.placeholder.com/800x500.png?text=Certificate" alt="Certificate">
-</div>
-
-<script>
-    // Позволяет менять изображение через URL параметр: ?image=ссылка_или_путь
-    const urlParams = new URLSearchParams(window.location.search);
-    const imageParam = urlParams.get('image');
-    if (imageParam) {
-        document.getElementById('certificate').src = imageParam;
-    }
-</script>
-
-</body>
-</html>
+        <!-- Логотип в base64 -->
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAAAyCAYAAABo9m2nAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAGXRFWHRTb2Z0d2FyZQBwYWludC5uZXQgNC4wLjEyQ0owkAAAACV0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4xMjkJHGwAAACZSURBVHja7dKxEQAgEADRP2n8b1Y2P0lwIiKooLLJqa2uM85VJJFEEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkURRJEkUR
